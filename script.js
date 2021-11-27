@@ -1,17 +1,23 @@
 // Fonctionnalité 1 :
 ////////////////////////////////////////////////////////////////
 let footer = document.getElementsByTagName("footer")[0];
-let clickCounter = 0
+let clickCounter = 0;
 
 function onFooterClick() {
-    clickCounter++
+    clickCounter++;
     console.log("click numéro " + clickCounter);
 }
-
 footer.addEventListener("click", onFooterClick);
 
 // Fonctionnalité 2 :
 ////////////////////////////////////////////////////////////////
+let navbarHeader = document.getElementById("navbarHeader");
+let burgerButton = document.querySelector("button.navbar-toggler");
+
+function onBurgerClick() {
+    navbarHeader.classList.toggle("collapse");
+}
+burgerButton.addEventListener("click", onBurgerClick);
 
 // Fonctionnalité 3 :
 ////////////////////////////////////////////////////////////////
