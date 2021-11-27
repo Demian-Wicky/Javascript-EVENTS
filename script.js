@@ -23,10 +23,9 @@ burgerButton.addEventListener("click", onBurgerClick);
 ////////////////////////////////////////////////////////////////
 let firstCard = document.getElementsByClassName("card")[0];
 let firstEdit = firstCard.getElementsByClassName("btn-outline-secondary")[0];
-let firstCarText = firstCard.getElementsByClassName("card-text")[0];
 
 function onCardEdit() {
-    firstCarText.style.color = "red";
+    firstCard.style.color = "red";
 }
 firstEdit.addEventListener("click", onCardEdit);
 // Fonctionnalité 4 :
