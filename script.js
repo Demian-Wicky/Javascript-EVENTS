@@ -63,7 +63,7 @@ function hoverOnCards(){
     nbOfCards = document.getElementsByClassName("card").length
     for (var i = 0; i < nbOfCards ; i++) {
         let card = document.getElementsByClassName("card")[i];
-        let cardEdit = card.getElementsByClassName("btn-outline-secondary")[0]
+        let cardEdit = card.getElementsByClassName("btn-sm btn-success")[0]
         let cardText = card.getElementsByClassName("card-text")[0]
         let cardImage = card.getElementsByClassName("card-img-top")[0]
         let cardStatus = card.status = "normal"
