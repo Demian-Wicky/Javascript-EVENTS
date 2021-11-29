@@ -60,7 +60,8 @@ navBar.addEventListener("dblclick", cdngo);
 ////////////////////////////////////////////////////////////////
 
 function hoverOnCards(){
-    for (var i = 0; i <= 5 ; i++) {
+    nbOfCards = document.getElementsByClassName("card").length
+    for (var i = 0; i < nbOfCards ; i++) {
         let card = document.getElementsByClassName("card")[i];
         let cardEdit = card.getElementsByClassName("btn-outline-secondary")[0]
         let cardText = card.getElementsByClassName("card-text")[0]
