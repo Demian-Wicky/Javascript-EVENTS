@@ -28,11 +28,33 @@ function onCardEdit() {
     firstCard.style.color = "red";
 }
 firstEdit.addEventListener("click", onCardEdit);
+
 // Fonctionnalité 4 :
 ////////////////////////////////////////////////////////////////
+let secondCard = document.getElementsByClassName("card")[1];
+let secondEdit = secondCard.getElementsByClassName("btn-outline-secondary")[0];
+function onCard2Edit() {
+    if (secondCard.style.color === "green") {
+        secondCard.style.color = "";
+    } else secondCard.style.color = "green";
+}
+secondEdit.addEventListener("click", onCard2Edit);
 
 // Fonctionnalité 5 :
 ////////////////////////////////////////////////////////////////
+
+let navBar = document.getElementsByClassName("navbar")[0];
+let styleSheet = document.styleSheets[0]
+
+function cdngo() {
+    if (styleSheet.disabled === true) {
+        styleSheet.disabled = false;
+    }
+    else
+    styleSheet.disabled = true;
+};
+
+navBar.addEventListener("dblclick", cdngo);
 
 // Fonctionnalité 6 :
 ////////////////////////////////////////////////////////////////
