@@ -58,6 +58,44 @@ navBar.addEventListener("dblclick", cdngo);
 
 // Fonctionnalité 6 :
 ////////////////////////////////////////////////////////////////
+// let card = document.getElementsByClassName("card")[0];
+// let cardEdit = card.getElementsByClassName("btn-outline-secondary")[0]
+// let cardText = card.getElementsByClassName("card-text")[0]//.innerText //.hidden: false
+// let cardImage = card.getElementsByClassName("card-img-top")[0]
+
+// function cardHover() {
+//     cardImage.style.width = "20%"
+//     cardText.hidden = true
+// }
+// cardEdit.addEventListener("mouseover", cardHover)
+
+function hoverOnCards(){
+    for (var i = 0; i <= 5 ; i++) {
+        let card = document.getElementsByClassName("card")[i];
+        let cardEdit = card.getElementsByClassName("btn-outline-secondary")[0]
+        let cardText = card.getElementsByClassName("card-text")[0]
+        let cardImage = card.getElementsByClassName("card-img-top")[0]
+        let cardStatus = card.status = "normal"
+
+        cardEdit.addEventListener("mouseover", function() {
+            if (cardStatus === "small"){
+                cardImage.style.width = "100%"
+                cardText.hidden = false
+                cardStatus = "normal"
+            }
+            else if (cardStatus === "normal"){
+                cardImage.style.width = "20%"
+                cardText.hidden = true
+                cardStatus = "small"
+            }
+        });
+    }
+}
+hoverOnCards()
+
+// console.log(cardText)
+// card.style.color = "blue"
+
 
 // Fonctionnalité 7 :
 ////////////////////////////////////////////////////////////////
