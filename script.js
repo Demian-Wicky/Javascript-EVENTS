@@ -42,7 +42,6 @@ secondEdit.addEventListener("click", onCard2Edit);
 
 // Fonctionnalité 5 :
 ////////////////////////////////////////////////////////////////
-
 let navBar = document.getElementsByClassName("navbar")[0];
 let styleSheet = document.styleSheets[0]
 
@@ -58,11 +57,10 @@ navBar.addEventListener("dblclick", cdngo);
 
 // Fonctionnalité 6 :
 ////////////////////////////////////////////////////////////////
-
 function hoverOnCards(){
     nbOfCards = document.getElementsByClassName("card").length
     for (var i = 0; i < nbOfCards ; i++) {
-        let card = document.getElementsByClassName("card")[i];
+        let card = document.getElementsByClassName("card")[i]
         let cardEdit = card.getElementsByClassName("btn-sm btn-success")[0]
         let cardText = card.getElementsByClassName("card-text")[0]
         let cardImage = card.getElementsByClassName("card-img-top")[0]
@@ -84,12 +82,17 @@ function hoverOnCards(){
 }
 hoverOnCards()
 
-// console.log(cardText)
-// card.style.color = "blue"
-
-
 // Fonctionnalité 7 :
 ////////////////////////////////////////////////////////////////
+let arrowRight = document.getElementsByClassName("jumbotron")[0].getElementsByTagName("p")[0].children[1] // OK
+
+function swipe(){
+    let lastCard = document.getElementsByClassName("col-md-4")[5]
+    let deckOfCards = lastCard.parentNode
+    deckOfCards.insertBefore(lastCard, deckOfCards.childNodes[0])
+}
+arrowRight.addEventListener("click", swipe); // OK
+
 
 // Fonctionnalité 8 :
 ////////////////////////////////////////////////////////////////
